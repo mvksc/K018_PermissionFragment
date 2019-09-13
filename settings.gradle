@@ -1,0 +1,2 @@
+include ':app', ':premissions'
+rootProject.name='K018_PremissionFragment'
