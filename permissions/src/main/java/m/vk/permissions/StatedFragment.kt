@@ -102,7 +102,7 @@ open class StatedFragment : Fragment() {
      * a previous saved state, this is the state.
      */
 
-    protected fun onRestoreState(savedInstanceState: Bundle) {
+    private fun onRestoreState(savedInstanceState: Bundle) {
 
     }
 
@@ -136,7 +136,7 @@ open class StatedFragment : Fragment() {
      * @param outState Bundle in which to place your saved state.
      */
 
-    protected fun onSaveState(outState: Bundle) {
+    private fun onSaveState(outState: Bundle) {
 
     }
 
