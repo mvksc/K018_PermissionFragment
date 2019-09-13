@@ -1,4 +1,4 @@
-package m.vk.premissions
+package m.vk.permissions
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -7,9 +7,9 @@ import androidx.core.content.ContextCompat
 
 import java.util.ArrayList
 
-abstract class RunTimePremission : StatedFragment() {
+abstract class RunTimePermission : StatedFragment() {
 
-    abstract fun onPermissionsGranted(requestCode: Int, status: Int, lisPermiss: List<ModelPremiss>)
+    abstract fun onPermissionsGranted(requestCode: Int, status: Int, lisPermisses: List<ModelPermiss>)
 
     fun requestAppPermissions(
         mContext: Context,
@@ -18,13 +18,13 @@ abstract class RunTimePremission : StatedFragment() {
     ) {
         var permissionCheck = PackageManager.PERMISSION_GRANTED
         var showRequestPermissions = false
-        val arrPermiss = ArrayList<ModelPremiss>()
+        val arrPermiss = ArrayList<ModelPermiss>()
         for (permission in requestedPermissions) {
             permissionCheck += ContextCompat.checkSelfPermission(mContext, permission)
             showRequestPermissions =
                 showRequestPermissions || shouldShowRequestPermissionRationale(permission)
 
-            val permiss = ModelPremiss(requestCode,ContextCompat.checkSelfPermission(mContext, permission),permission)
+            val permiss = ModelPermiss(requestCode,ContextCompat.checkSelfPermission(mContext, permission),permission)
             arrPermiss.add(permiss)
 
             //Log.e("Check 1",permission + " : " + ContextCompat.checkSelfPermission(mContext, permission));
@@ -50,13 +50,13 @@ abstract class RunTimePremission : StatedFragment() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         var permissionCheck = PackageManager.PERMISSION_GRANTED
-        val arrPermiss = ArrayList<ModelPremiss>()
+        val arrPermiss = ArrayList<ModelPermiss>()
 
         var i = 0
         for (permission in grantResults) {
             permissionCheck += permission
             //Log.e("Check 2",permissions[i] + " : " + grantResults[i]);
-            val permiss = ModelPremiss(requestCode,grantResults[i],permissions[i])
+            val permiss = ModelPermiss(requestCode,grantResults[i],permissions[i])
             arrPermiss.add(permiss)
             i++
         }

@@ -1,4 +1,4 @@
-package m.vk.k018_premissionfragment
+package m.vk.k018_permissionfragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

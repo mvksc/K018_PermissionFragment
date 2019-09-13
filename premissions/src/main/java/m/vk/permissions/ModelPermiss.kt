@@ -1,9 +1,9 @@
-package m.vk.premissions
+package m.vk.permissions
 
 import android.os.Parcel
 import android.os.Parcelable
 
-data class ModelPremiss(
+data class ModelPermiss(
     val requestCode: Int,
     val grantResults: Int,
     val permissions: String?
@@ -24,12 +24,12 @@ data class ModelPremiss(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<ModelPremiss> {
-        override fun createFromParcel(parcel: Parcel): ModelPremiss {
-            return ModelPremiss(parcel)
+    companion object CREATOR : Parcelable.Creator<ModelPermiss> {
+        override fun createFromParcel(parcel: Parcel): ModelPermiss {
+            return ModelPermiss(parcel)
         }
 
-        override fun newArray(size: Int): Array<ModelPremiss?> {
+        override fun newArray(size: Int): Array<ModelPermiss?> {
             return arrayOfNulls(size)
         }
     }

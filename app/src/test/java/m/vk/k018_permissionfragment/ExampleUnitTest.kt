@@ -1,4 +1,4 @@
-package m.vk.premissions
+package m.vk.k018_permissionfragment
 
 import org.junit.Test
 

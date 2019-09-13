@@ -1,4 +1,4 @@
-package m.vk.premissions
+package m.vk.permissions
 
 import android.content.Intent
 

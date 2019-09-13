@@ -1,4 +1,4 @@
-package m.vk.k018_premissionfragment
+package m.vk.permissions
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("m.vk.k018_premissionfragment", appContext.packageName)
+        assertEquals("m.vk.premissions.test", appContext.packageName)
     }
 }

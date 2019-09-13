@@ -1,4 +1,4 @@
-package m.vk.k018_premissionfragment
+package m.vk.k018_permissionfragment
 
 import android.Manifest
 import android.os.Bundle
@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import m.vk.k018_premissionfragment.databinding.FragmentCameraBinding
-import m.vk.premissions.ModelPremiss
-import m.vk.premissions.RunTimePremission
+import m.vk.k018_permissionfragment.databinding.FragmentCameraBinding
+import m.vk.permissions.ModelPermiss
+import m.vk.permissions.RunTimePermission
 
-class CameraFragment : RunTimePremission() {
+class CameraFragment : RunTimePermission() {
 
     private var RESULT_SINGLE_REQUEST = 100
     private var RESULT_MULTIPLE_REQUEST = 200
@@ -30,7 +30,7 @@ class CameraFragment : RunTimePremission() {
         binding = DataBindingUtil.inflate(inflater ,R.layout.fragment_camera,container , false)
         return binding.root
     }
-    override fun onPermissionsGranted(requestCode: Int,status: Int,lisPermiss: List<ModelPremiss>) {
+    override fun onPermissionsGranted(requestCode: Int, status: Int, lisPermisses: List<ModelPermiss>) {
         if (requestCode == RESULT_SINGLE_REQUEST){
             if (status == STATUS_GRANTED){
                 onShowMsg("Allow Single Permission Success.")

@@ -8,7 +8,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "m.vk.k018_premissionfragment"
+        applicationId 'm.vk.k018_permissionfragment'
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
